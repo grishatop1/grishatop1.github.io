@@ -1,0 +1,53 @@
+@media(max-width:500px){
+   header {
+       flex-direction: column;
+   }
+   .header-column {
+       margin-bottom: 0px !important;
+   }
+   .header-column p {
+       text-align: center;
+       font-size: 22px;
+       width: 20ch;
+    }
+    .git-logo-box{
+       margin-top: 10px;
+    }
+    .social-box {
+        margin-top: 10px;
+    }
+    .content-header h1{
+       padding: 16px;
+    }
+    section{
+       flex-direction: column;
+       align-items: center;
+       min-height: auto;
+       margin: 25px 0 25px 0;
+    }
+    .section-column {
+       margin-bottom: 5px;
+    }
+    section img {
+        -webkit-transform: none !important;
+        transform: none !important;
+        box-shadow: 0 0 5px 1px rgb(0,0,0,0.4);
+        border-radius: 5px;
+    }
+    .reverse-order {
+        flex-direction: column !important;
+    }
+    hr {
+        width: 93%;
+        visibility: visible !important;
+    }
+    .section-wrapper{
+       display: flex;
+       justify-content: space-between;
+       flex-direction: column;
+    }
+    i {
+        font-size: 40px;
+        margin: 10px;
+    }
+}
