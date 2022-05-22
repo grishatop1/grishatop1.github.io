@@ -4,7 +4,7 @@ var vertexHeight = 15000,
     planeDefinition = 100,
     planeSize = 1245000,
     totalObjects = 1,
-    background = "#fff",
+    canvas_background = "#fff",
     meshColor = "#bdbdbd";
 
 var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 400000)
@@ -12,7 +12,7 @@ camera.position.z = 10000;
 camera.position.y = 10000;
 
 var scene = new THREE.Scene();
-scene.fog = new THREE.Fog(background, 1, 300000);
+scene.fog = new THREE.Fog(canvas_background, 1, 300000);
 
 var planeGeo = new THREE.PlaneGeometry(planeSize, planeSize, planeDefinition, planeDefinition);
 var plane = new THREE.Mesh(planeGeo, new THREE.MeshBasicMaterial({
@@ -23,9 +23,9 @@ plane.rotation.x -= Math.PI * .5;
 
 scene.add(plane);
 
-var renderer = new THREE.WebGLRenderer({ alpha: false, canvas: container });
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(background, 1);
+window.renderer = new THREE.WebGLRenderer({ alpha: false, canvas: container });
+window.renderer.setSize(window.innerWidth, window.innerHeight);
+window.renderer.setClearColor(canvas_background, 1);
 
 
 updatePlane();
@@ -55,7 +55,7 @@ function render() {
         count += 0.1
     }
 
-    renderer.render(scene, camera);
+    window.renderer.render(scene, camera);
 }
 
 window.addEventListener('resize', onWindowResize, false);
@@ -64,5 +64,5 @@ function onWindowResize() {
     //changes the size of the canavs and updates it
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    window.renderer.setSize(window.innerWidth, window.innerHeight);
 }

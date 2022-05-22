@@ -98,8 +98,6 @@ function hideLoadingDebug() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    hideLoadingDebug()
-    return
     var fontLoader = new FontLoader(["Work Sans", "Work Sans Bold"], {
         "complete": () => {
             loading_text.style.opacity = "1";
