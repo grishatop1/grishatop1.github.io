@@ -3,6 +3,7 @@
     --secondary-color: #ffffff;
     --other-color: #a8a8a8;
     --soft-color: #242424;
+    --cheader-color: var(--soft-color);
 }
 
 html[data-theme='dark'] {
@@ -10,13 +11,7 @@ html[data-theme='dark'] {
     --secondary-color: #000000;
     --other-color: #a8a8a8;
     --soft-color: #8c8c8c;
-}
-
-html[data-theme='light'] {
-    --primary-color: #000000;
-    --secondary-color: #ffffff;
-    --other-color: #a8a8a8;
-    --soft-color: #242424;
+    --cheader-color: #915fff;
 }
 
 * {
@@ -159,7 +154,7 @@ header canvas {
 
 .content-header {
     width: 100%;
-    background-color: var(--soft-color);
+    background-color: var(--cheader-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
