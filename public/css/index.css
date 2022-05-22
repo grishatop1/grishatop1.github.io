@@ -205,6 +205,15 @@ i {
     margin: 20px;
 }
 
+i:hover {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
 hr {
     margin: 0 auto;
     visibility: hidden !important;
