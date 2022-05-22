@@ -1,5 +1,4 @@
 const btn = document.getElementById('theme-btn')
-const borderAdd=  1
 
 const light_svg = document.getElementById('light-svg')
 const dark_svg = document.getElementById('dark-svg')
@@ -9,7 +8,9 @@ var theme = "light"
 function changeToDark() {
     document.documentElement.setAttribute('data-theme', "dark")
 
-    window.renderer.setClearColor(getComputedStyle(document.documentElement).getPropertyValue("--secondary-color"), 1)
+    var colorValue = parseInt ( getComputedStyle(document.documentElement).getPropertyValue("--secondary-color").replace("#","0x"), 16 );
+    window.renderer.setClearColor(colorValue, 1)
+    
     loading_text.style.color = getComputedStyle(document.documentElement).getPropertyValue("--primary-color")
     changeToDarkAnimation()
 
@@ -19,7 +20,8 @@ function changeToDark() {
 function changeToLight() {
     document.documentElement.setAttribute('data-theme', "light")
 
-    window.renderer.setClearColor(getComputedStyle(document.documentElement).getPropertyValue("--secondary-color"), 1)
+    var colorValue = parseInt ( getComputedStyle(document.documentElement).getPropertyValue("--secondary-color").replace("#","0x"), 16 );
+    window.renderer.setClearColor(colorValue, 1)
     loading_text.style.color = getComputedStyle(document.documentElement).getPropertyValue("--primary-color")
     changeToLightAnimation()
 

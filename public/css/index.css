@@ -1,20 +1,20 @@
 :root {
-    --primary-color: #000;
-    --secondary-color: #fff;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
     --other-color: #a8a8a8;
     --soft-color: #242424;
 }
 
 html[data-theme='dark'] {
-    --primary-color: #fff;
-    --secondary-color: #000;
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
     --other-color: #a8a8a8;
     --soft-color: #8c8c8c;
 }
 
 html[data-theme='light'] {
-    --primary-color: #000;
-    --secondary-color: #fff;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
     --other-color: #a8a8a8;
     --soft-color: #242424;
 }
