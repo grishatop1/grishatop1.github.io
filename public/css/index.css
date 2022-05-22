@@ -167,6 +167,7 @@ section img {
     font-size: 50px;
     margin-bottom: 30px;
     text-align: center;
+    user-select: text !important;
 }
 
 .section-desc {
@@ -176,6 +177,7 @@ section img {
     color:rgb(41, 41, 41);
     text-align: center;
     line-height: 1.6;
+    user-select: text !important;
 }
 .techs {
     display: flex;
@@ -216,5 +218,5 @@ i:hover {
 
 hr {
     margin: 0 auto;
-    visibility: hidden !important;
+    visibility: hidden;
 }
