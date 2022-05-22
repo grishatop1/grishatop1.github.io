@@ -256,7 +256,11 @@ section img {
 i {
     font-size: 80px;
     margin: 20px;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.8s;
 }
 
 i:hover {
@@ -265,7 +269,7 @@ i:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+    transition: all 0s;
 }
 
 hr {
