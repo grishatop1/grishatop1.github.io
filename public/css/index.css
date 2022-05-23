@@ -256,6 +256,7 @@ section img {
 i {
     font-size: 80px;
     margin: 20px;
+    line-height: 0;
     background-color: var(--primary-color);
     background-clip: text;
     -webkit-background-clip: text;
