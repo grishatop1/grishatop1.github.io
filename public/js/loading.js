@@ -98,9 +98,9 @@ function hideLoadingDebug() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    loading_text.style.opacity = "1";
     var fontLoader = new FontLoader(["Work Sans", "Work Sans Bold"], {
         "complete": () => {
-            loading_text.style.opacity = "1";
             setTimeout(hideLoading, 500);
         }
     }, 3000);

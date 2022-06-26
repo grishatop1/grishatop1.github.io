@@ -5,11 +5,11 @@ var vertexHeight = 15000,
     planeSize = 1245000,
     totalObjects = 1,
     canvas_background = "#fff",
-    meshColor = "#bdbdbd";
+    meshColor = "#e2dcdc";
 
 var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 400000)
 camera.position.z = 10000;
-camera.position.y = 10000;
+camera.position.y = 15000;
 
 var scene = new THREE.Scene();
 scene.fog = new THREE.Fog(canvas_background, 1, 300000);
@@ -37,7 +37,7 @@ function updatePlane() {
     }
 };
 
-camera.lookAt(new THREE.Vector3(0, 11000, 0))
+camera.lookAt(new THREE.Vector3(0, 17000, 0))
 render();
 
 var count = 0
