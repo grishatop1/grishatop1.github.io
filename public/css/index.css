@@ -256,7 +256,6 @@ section img {
 i {
     font-size: 80px;
     margin: 20px;
-    line-height: 0;
     background-color: var(--primary-color);
     background-clip: text;
     -webkit-background-clip: text;
@@ -271,6 +270,10 @@ i:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0s;
+}
+
+[class*=devicon-]{
+    line-height: normal !important;
 }
 
 hr {
