@@ -5,7 +5,7 @@ var vertexHeight = 15000,
     planeSize = 1245000,
     totalObjects = 1,
     canvas_background = "#fff",
-    meshColor = "#e2dcdc";
+    meshColor = "#d4d4d4";
 
 var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 400000)
 camera.position.z = 10000;
