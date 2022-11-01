@@ -103,6 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
         "complete": () => {
             setTimeout(hideLoading, 500);
         }
-    }, 3000);
+    }, null);
     fontLoader.loadFonts();
 });
