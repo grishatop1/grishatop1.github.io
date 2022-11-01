@@ -41,6 +41,10 @@
 
 	<script src="public/js/FontLoader.js"></script>
 
+	<script src="public/js/loading.js" defer></script>
+	<script src="public/js/waves.js" type="module" defer></script>
+	<script src="public/js/theme.js" defer></script>
+
 	<title>Grishin Portfolio</title>
 </head>
 
@@ -106,9 +110,7 @@
 				<div class="section-text-column section-column">
 					<div class="section-header">MYNC</div>
 					<div class="section-desc">
-						Aplikacija za slusanje muzike sinhronizovano napisana na Pythonu. Sluzi kao alternativa za Diskord
-						music
-						botove i nije bazirana na streamingu.
+						Aplikacija za sinhronizovano slusanje muzike. Sluzi kao alternativa za Diskord music botove i nije bazirana na streamingu.
 					</div>
 				</div>
 				<div class="section-image-column section-column">
@@ -136,7 +138,7 @@
 				<div class="section-text-column section-column">
 					<div class="section-header">Crkveni kalendar</div>
 					<div class="section-desc">
-						Sajt za pokretni pravoslavni kalendar, koristi Python za server kod.
+						Sajt za pokretni pravoslavni kalendar, koristi Python (Flask framework) za server kod.
 					</div>
 				</div>
 				<div class="section-image-column section-column">
@@ -144,6 +146,20 @@
 				</div>
 			</section>
 		</div>
+
+		<hr>
+
+		<section>
+			<div class="section-text-column section-column">
+				<div class="section-header">pwdKeeper</div>
+				<div class="section-desc">
+					Lokalni i pouzdani password manager, napravljen pomocu Qt frameworka.
+				</div>
+			</div>
+			<div class="section-image-column section-column">
+				<img src="public/media/apps/pwdkeeper.jpg" alt="pwdKeeper" class="sec-image-right">
+			</div>
+		</section>
 
 		<div class="content-header">
 			<h1>O meni...</h1>
@@ -205,11 +221,6 @@
 			</div>
 		</div>
 	</main>
-
-	
-	<script src="public/js/loading.js"></script>
-	<script src="public/js/waves.js" type="module"></script>
-	<script src="public/js/theme.js"></script>
 
 </body>
 
