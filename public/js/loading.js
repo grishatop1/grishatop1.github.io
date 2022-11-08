@@ -1,13 +1,13 @@
-var loading_text = document.getElementById('load-text');
-var loading_text_container = document.getElementById('load-container');
+let loading_text = document.getElementById('load-text');
+let loading_text_container = document.getElementById('load-container');
 
-var loading_screen = document.getElementById('loading-screen');
+let loading_screen = document.getElementById('loading-screen');
 
 let txt_to_change = "Cao, ja sam Grigorije, hobi programer iz Bosne i Hercegovine.";
 let txt_init = "UCITAVANJE"
 
-var is_loading = true;
-var is_showing = true;
+let is_loading = true;
+let is_showing = true;
 
 window.scrollTo(0,0);
 
@@ -27,22 +27,14 @@ async function changeTextAnim(txt) {
         loading_text.innerHTML = txt_init.substring(0, i);
         await sleep(50);
     }
-    for (var i = 0; i < txt.length; i++) {
+    for (let i = 0; i < txt.length; i++) {
         await sleep(40);
         loading_text.innerHTML += txt[i];
     }
 }
 
 async function hideLoading() {
-
-    if (window.mobileCheck()) {
-        // await changeTextAnim("Sajt ne radi na mobilnim uređajima.");
-        // loading_text.style.color = "red";
-        // return
-    }
-    
     await changeTextAnim(txt_to_change);
-    
     anime({
         targets: loading_screen,
         opacity: 0,
@@ -58,13 +50,14 @@ async function hideLoading() {
         delay: 600
     })
 
+    // need to remove this and use CSS instead
     if (!window.mobileCheck()) {
         loading_text.style.width = "50%";
     }
     
-    var data = loading_text_container.getBoundingClientRect();
-    var txt_data = loading_text.getBoundingClientRect();
-    var to_add = 0
+    let data = loading_text_container.getBoundingClientRect();
+    let txt_data = loading_text.getBoundingClientRect();
+    let to_add = 0
     if (window.mobileCheck()) {
         to_add = txt_data.height / 2
     }
@@ -80,7 +73,7 @@ async function hideLoading() {
         begin: () => {
             document.getElementsByTagName('html')[0].style.overflow = "visible";
             window.addEventListener('resize', function(event) {
-                var data = loading_text_container.getBoundingClientRect();
+                let data = loading_text_container.getBoundingClientRect();
                 loading_text.style.left = data.right + "px";
                 loading_text.style.top = data.top + window.scrollY + to_add + "px";
             }, true);
@@ -99,7 +92,7 @@ function hideLoadingDebug() {
 
 document.addEventListener("DOMContentLoaded", function() {
     loading_text.style.opacity = "1";
-    var fontLoader = new FontLoader(["Work Sans", "Work Sans Bold"], {
+    let fontLoader = new FontLoader(["Work Sans", "Work Sans Bold"], {
         "complete": () => {
             setTimeout(hideLoading, 500);
         }
