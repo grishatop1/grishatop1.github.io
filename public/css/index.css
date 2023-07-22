@@ -181,6 +181,11 @@ section img {
     width: 70%;
 }
 
+#lotmore {
+    text-align: center;
+    margin: 20px;
+}
+
 .reverse-order {
     flex-direction: row-reverse;
 }

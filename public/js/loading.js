@@ -3,7 +3,7 @@ let loading_text_container = document.getElementById('load-container');
 
 let loading_screen = document.getElementById('loading-screen');
 
-let txt_to_change = "Hi, I'm Grisha, a programmer from Bosnia and Herzegovina :)";
+let txt_to_change = "Hi, I'm Grisha, programmer from Bosnia and Herzegovina :)";
 let txt_init = "LOADING"
 
 let is_loading = true;
