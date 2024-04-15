@@ -201,6 +201,10 @@ section img {
     display: block;
 }
 
+.sec-image-left-small {
+    height: 300px;
+}
+
 .sec-image-right {
     transform: perspective(1000px) rotate3d(0,-1,0, 25deg);
     display: block;
